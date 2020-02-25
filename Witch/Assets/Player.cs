@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
 
     cameraSmooth mainCamera;
 
+    private Inventory inventory;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,7 @@ public class Player : MonoBehaviour
         timeLast = Time.time;
         dashTime = Time.time;
         mainCamera = Camera.main.GetComponent<cameraSmooth>();
+        inventory = new Inventory();
 
     }
 
