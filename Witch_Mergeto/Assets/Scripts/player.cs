@@ -5,6 +5,9 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
     // Start is called before the first frame update
+    public static int limitSize = 10;
+    public static int limitHeight = 4;
+    private inventory myInventory = new inventory(limitSize);
     private bool isOpen;
 
     private void Update()
@@ -13,7 +16,7 @@ public class player : MonoBehaviour
         {
             if(!isOpen)
             {
-                inventoryManager.INSTANCE.openContainer(new containerPlayerInventory(null, null));
+                inventoryManager.INSTANCE.openContainer(new containerPlayerInventory(null, myInventory, limitSize, limitHeight));
                 isOpen = true;
             }
             else 

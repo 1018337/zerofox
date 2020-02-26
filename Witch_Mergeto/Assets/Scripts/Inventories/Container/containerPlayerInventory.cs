@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class containerPlayerInventory : container
 {
-    public containerPlayerInventory(inventory containerInventory, inventory playerInventory) : base (containerInventory, playerInventory)
+    int x = 0;
+    public containerPlayerInventory(inventory containerInventory, inventory playerInventory, int limitSize, int limitHeight) : base(containerInventory, playerInventory)
     {
-        //Adding slots
-
+        for (int i = 0; i < limitSize; i++)
+        {
+            addSlotToContainer(playerInventory, i, 40 + (55 * x), (Mathf.FloorToInt(i / 4) * -55) + -40, 50);
+            x++;
+            if (x == limitHeight)
+            {
+                x = 0;
+            }
+        }
     }
 
     public override GameObject getContainerPrefab()

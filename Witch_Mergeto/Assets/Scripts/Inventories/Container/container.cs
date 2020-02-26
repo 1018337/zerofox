@@ -25,8 +25,20 @@ public class container
         slot.setSlot(inventory, slotID, this);
         spawnedSlot.transform.SetParent(spawnedContainerPrefab.transform);
         spawnedSlot.transform.SetAsLastSibling();
+        Debug.Log(spawnedSlot.transform);
         slotRT.anchoredPosition = new Vector2(x, y);
+        slotRT.localPosition = new Vector3(slotRT.localPosition.x, slotRT.localPosition.y, 0);
+        slotRT.localScale = new Vector3(1, 1, 1);
         slotRT.sizeDelta = Vector2.one * slotSize;
+        slots.Add(slot);
+    }
+
+    public void updateSlots()
+    {
+        foreach(inventorySlot slot in slots)
+        {
+            slot.updateSlot();
+        }
     }
 
     public void openContainer()

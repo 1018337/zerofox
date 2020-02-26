@@ -514,6 +514,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 740801ca8457816499ed978c979abc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotPrefab: {fileID: 1051966757749104949, guid: f5f2f98b1f6f5334e872bd7e1620b9c5,
+    type: 3}
   containers:
   - containerName: Player Inventory
     containerPrefab: {fileID: 3423421659321672544, guid: e72cefea27d8f3b44a3e958d75b1957f,
