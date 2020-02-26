@@ -11,7 +11,9 @@ public class Inventory
         itemList = new List<Item>();
 
         AddItem(new Item { itemType = Item.ItemType.potionA, amount = 1 });
-        Debug.Log(itemList.Count);
+        AddItem(new Item { itemType = Item.ItemType.potionB, amount = 1 });
+        AddItem(new Item { itemType = Item.ItemType.potionC, amount = 1 });
+       
     }
 
     public void AddItem(Item item)
@@ -19,4 +21,8 @@ public class Inventory
         itemList.Add(item);
     }
 
+    public List<Item> GetItemList()
+    {
+        return itemList;
+    }
 }
