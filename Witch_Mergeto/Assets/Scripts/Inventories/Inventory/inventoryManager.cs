@@ -14,8 +14,31 @@ public class inventoryManager : MonoBehaviour
     #endregion
 
     public GameObject slotPrefab;
-    public List<containerGetter> containers = new List<containerGetter>();
+    public List<spriteGetter> backgrounds = new List<spriteGetter>();
+    public List<containerGetter> containers = new List<containerGetter>();    
     private container currentOpenContainer;
+    private itemStack currentDraggedItem = itemStack.Empty;
+    private GameObject spawnedDragStack;
+    private inventoryDraggedItem dragItem;
+    
+    private void Start()
+    {
+        dragItem = GetComponentInChildren<inventoryDraggedItem>();
+    }
+
+    public Sprite getSpritePrefab(string name)
+    {
+        foreach (spriteGetter backgrounds in backgrounds)
+        {
+            if (backgrounds.spriteName == name)
+            {
+                return backgrounds.spritePrefab;
+            }
+        }
+
+        return null;
+    }
+    
 
     public GameObject getContainerPrefab(string name)
     {
@@ -30,13 +53,13 @@ public class inventoryManager : MonoBehaviour
         return null;
     }
 
-    public void openContainer(container container)
+
+    public void openContainer(container container, int sizeH)
     {
         if(currentOpenContainer != null)
         {
             currentOpenContainer.closeContainer();
         }
-
         currentOpenContainer = container;
     }
 
@@ -47,6 +70,16 @@ public class inventoryManager : MonoBehaviour
             currentOpenContainer.closeContainer();
         }
     }
+
+    public itemStack getDraggedItem()
+    {
+        return currentDraggedItem;
+    }
+
+    public void setDragged(itemStack itemIn)
+    {
+        dragItem.setDraggedItem(currentDraggedItem = itemIn);
+    }
 }
 
 [System.Serializable]
@@ -54,4 +87,11 @@ public class containerGetter
 {
     public string containerName;
     public GameObject containerPrefab;
+}
+
+[System.Serializable]
+public class spriteGetter
+{
+    public string spriteName;
+    public Sprite spritePrefab;
 }

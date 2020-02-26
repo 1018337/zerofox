@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class inventory
 {
-    private List<potionStack> inventoryContents = new List<potionStack>();
+    private List<itemStack> inventoryContents = new List<itemStack>();
 
     public inventory(int size)
     {
         for (int i = 0; i < size; i++)
         {
-            inventoryContents.Add(new potionStack(i));
+            inventoryContents.Add(new itemStack(i));
         }
     }
 
-    public bool addPotion(potionStack input)
+    public bool addItem(itemStack input)
     {
-        foreach(potionStack stack in inventoryContents)
+        foreach(itemStack stack in inventoryContents)
         {
             if(stack.isEmpty())
             {
@@ -25,7 +25,7 @@ public class inventory
             }
             else
             {
-                if (potionStack.areItemsEqual(input, stack))
+                if (itemStack.areItemsEqual(input, stack))
                 {
                     if(stack.canAddTo(input.getCount()))
                     {
@@ -34,8 +34,8 @@ public class inventory
                     }
                     else
                     {
-                        int difference = (stack.getCount() + input.getCount()) - stack.getPotion().maxStack;
-                        stack.setCount(stack.getPotion().maxStack);
+                        int difference = (stack.getCount() + input.getCount()) - stack.getItem().maxStack;
+                        stack.setCount(stack.getItem().maxStack);
                         input.setCount(difference);
                     }
                 }
@@ -43,12 +43,12 @@ public class inventory
         }
         return false;
     }
-    public potionStack getStackInSlot(int index)
+    public itemStack getStackInSlot(int index)
     {
         return inventoryContents[index];
     }
     // return entire content of inventory
-    public List<potionStack> getInventoryStacks()
+    public List<itemStack> getInventoryStacks()
     {
         return inventoryContents;
     }
