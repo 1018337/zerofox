@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6405B061-9DBB-F6EB-6308-1E92CE621D82}</ProjectGuid>
+    <ProjectGuid>{0EBAB0F3-4C72-8586-FE85-AC455356E942}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -71,36 +71,38 @@
     <Compile Include="Assets\Scripts\Inventories\Inventory\inventorySlot.cs" />
     <Compile Include="Assets\Scripts\Inventories\Items\item.cs" />
     <Compile Include="Assets\Scripts\Inventories\Items\itemStack.cs" />
+    <Compile Include="Assets\Scripts\Inventories\Items\potion.cs" />
+    <Compile Include="Assets\Scripts\Inventories\Items\potionStack.cs" />
     <Compile Include="Assets\Scripts\player.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>F:/- General files/- Git/Witch_Safe/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>F:/- General files/- Git/zerofox/Witch_Mergeto/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>F:/- General files/- Git/Witch_Safe/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>F:/- General files/- Git/zerofox/Witch_Mergeto/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>F:/- General files/- Git/Witch_Safe/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>F:/- General files/- Git/zerofox/Witch_Mergeto/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>F:/- General files/- Git/Witch_Safe/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>F:/- General files/- Git/zerofox/Witch_Mergeto/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>F:/- General files/- Git/Witch_Safe/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>F:/- General files/- Git/zerofox/Witch_Mergeto/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>F:/- General files/- Git/Witch_Safe/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>F:/- General files/- Git/zerofox/Witch_Mergeto/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>F:/- General files/- Git/Witch_Safe/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>F:/- General files/- Git/zerofox/Witch_Mergeto/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>F:/- General files/- Git/Witch_Safe/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>F:/- General files/- Git/zerofox/Witch_Mergeto/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>F:/- General files/- Git/Witch_Safe/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>F:/- General files/- Git/zerofox/Witch_Mergeto/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>F:/- General files/- Git/Witch_Safe/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>F:/- General files/- Git/zerofox/Witch_Mergeto/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/2019.2.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
