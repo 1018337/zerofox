@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
 
     cameraSmooth mainCamera;
 
+    [SerializeField] private UI_Inventory uiInventory;
     private Inventory inventory;
     
     // Start is called before the first frame update
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
         dashTime = Time.time;
         mainCamera = Camera.main.GetComponent<cameraSmooth>();
         inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
 
     }
 
