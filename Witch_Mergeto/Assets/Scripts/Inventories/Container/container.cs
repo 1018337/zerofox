@@ -27,13 +27,13 @@ public class container
         slot.setSlot(inventory, slotID, this);
         // attaches slot to the main container for inventory
         spawnedSlot.transform.SetParent(spawnedContainerPrefab.transform);
-        spawnedSlot.transform.SetAsLastSibling();
+        spawnedSlot.transform.SetAsFirstSibling();
         // sets the anchor position so it can reference the object
         slotRT.anchoredPosition = new Vector2(x, y);
         // sets the localpos to 0 z because otherwise it seems to fly around and it's a good backup
         slotRT.localPosition = new Vector3(slotRT.localPosition.x, slotRT.localPosition.y, 0);
         // sets the scale of each slot - scale is more like zoom
-        slotRT.localScale = new Vector3(1, 1, 1);
+        slotRT.localScale = Vector3.one;
         // sets the size of each slot
         slotRT.sizeDelta = Vector2.one * slotSize;
         // add it to the container
@@ -59,7 +59,11 @@ public class container
     public void closeContainer()
     {
         // blow up the container with nukes and stuff
-        Object.Destroy(spawnedContainerPrefab);
+        if (spawnedContainerPrefab.name != "Player Inventory(Clone)")
+        {
+            Debug.Log(spawnedContainerPrefab.name);
+            Object.Destroy(spawnedContainerPrefab);
+        }
     }
     // needs to be overridden can not be left blank or null
     public virtual GameObject getContainerPrefab()

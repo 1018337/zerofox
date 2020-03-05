@@ -100,7 +100,7 @@ public class itemStack
     //moves the item to new slot
     public itemStack copy()
     {
-        Debug.Log("Copied");
+        Debug.Log("Copied" + this.slotID + this.item + this.count);
         return new itemStack(this.item, this.count, this.slotID);
     }
 

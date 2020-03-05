@@ -14,35 +14,18 @@ public class inventoryManager : MonoBehaviour
     #endregion
 
     public GameObject slotPrefab;
-    public GameObject dragPrefab;
-    public List<spriteGetter> backgrounds = new List<spriteGetter>();
     public List<containerGetter> containers = new List<containerGetter>();    
     private container currentOpenContainer;
     private itemStack currentDraggedItem = itemStack.Empty;
     private GameObject spawnedDragStack;
     private inventoryDraggedItem dragItem;
-    private RectTransform slotRT;
+    private player player;
+
     private void Start()
     {
-        slotRT = dragPrefab.GetComponent<RectTransform>();
-        
+        player = FindObjectOfType<player>();
         dragItem = GetComponentInChildren<inventoryDraggedItem>();
-    }
-
-    public Sprite getSpritePrefab(string name)
-    {
-        foreach (spriteGetter backgrounds in backgrounds)
-        {
-            if (backgrounds.spriteName == name)
-            {
-                Debug.Log("sprite?");
-                return backgrounds.spritePrefab;
-            }
-        }
-
-        return null;
-    }
-    
+    }    
 
     public GameObject getContainerPrefab(string name)
     {
@@ -64,6 +47,7 @@ public class inventoryManager : MonoBehaviour
         {
             currentOpenContainer.closeContainer();
         }
+
         currentOpenContainer = container;
     }
 
@@ -91,11 +75,4 @@ public class containerGetter
 {
     public string containerName;
     public GameObject containerPrefab;
-}
-
-[System.Serializable]
-public class spriteGetter
-{
-    public string spriteName;
-    public Sprite spritePrefab;
 }

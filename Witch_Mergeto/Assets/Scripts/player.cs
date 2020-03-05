@@ -5,7 +5,7 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static int limitSize = 10;
+    public static int limitSize = 4;
     public static int limitHeight = 4;
     public item[] itemsToAdd;
     private inventory myInventory = new inventory(limitSize);
@@ -18,10 +18,13 @@ public class player : MonoBehaviour
         {
             myInventory.addItem(new itemStack(item, 1));
         }
+
+        inventoryManager.INSTANCE.openContainer(new containerPlayerInventory(null, myInventory, limitSize, limitHeight), limitHeight);
     }
 
     private void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.E))
         {
             if(!isOpen)
@@ -35,5 +38,11 @@ public class player : MonoBehaviour
                 isOpen = false;
             }
         }
+        */
+    }
+
+    public inventory getInventory()
+    {
+        return myInventory;
     }
 }
