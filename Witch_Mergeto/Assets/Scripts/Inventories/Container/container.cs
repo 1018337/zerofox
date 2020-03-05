@@ -9,6 +9,7 @@ public class container
     private GameObject spawnedContainerPrefab;
     private inventory containerInventory;
     private inventory playerInventory;
+    
 
     public container(inventory containerInventory, inventory playerInventory)
     {
@@ -52,6 +53,7 @@ public class container
     {
         //replace whatever container with this container so it doesn't mess with other things
         spawnedContainerPrefab = Object.Instantiate(getContainerPrefab(), inventoryManager.INSTANCE.transform);
+        spawnedContainerPrefab.transform.SetAsFirstSibling();
     }
 
     public void closeContainer()

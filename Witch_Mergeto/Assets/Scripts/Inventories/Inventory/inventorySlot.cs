@@ -98,6 +98,12 @@ public class inventorySlot : MonoBehaviour, IPointerDownHandler
                     inventoryManager.setDragged(dragCopy);
                 }
             }
+            else
+            {
+                itemStack currentDragCopy = currentDraggedItem.copy();
+                this.setSlotContents(currentDraggedItem);
+                inventoryManager.setDragged(itemCopy);
+            }
         }
     }
 }
