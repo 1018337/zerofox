@@ -17,20 +17,21 @@ public class inventoryDraggedItem : MonoBehaviour
 
     private void drawItem()
     {
-        
+
         if (!myStack.isEmpty())
         {
             itemIcon.enabled = true;
             itemIcon.sprite = myStack.getItem().itemIcon;
+            this.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(90,90);
 
             if (myStack.getCount() > 1)
             {
-                Debug.Log(myStack.getItem().itemIcon);
+                //Debug.Log(myStack.getItem().itemIcon);
                 itemAmount.text = myStack.getCount().ToString();
             }
             else
             {
-                Debug.Log("draw3");
+                //Debug.Log("draw stack");
                 itemAmount.text = string.Empty;
             }
         }
