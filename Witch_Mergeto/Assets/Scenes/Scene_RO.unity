@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 244173540}
   - component: {fileID: 244173539}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Wardrobe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,7 +244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a167348d6ce284eb3e25e09af42d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsToAdd: []
 --- !u!65 &264327397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -331,7 +330,7 @@ GameObject:
   - component: {fileID: 435784808}
   - component: {fileID: 435784807}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: End area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,6 +582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758521423}
   - component: {fileID: 758521422}
+  - component: {fileID: 758521424}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -602,10 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61367b9900a1fd341afd1073fe57283a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsToAdd:
-  - {fileID: 11400000, guid: 9231e0cad1fa4f64e80c4105c1107118, type: 2}
-  - {fileID: 11400000, guid: 3c8ce483d6885214985fbeca30261dfc, type: 2}
-  - {fileID: 11400000, guid: dcc4e7645f8b0014097c62cd9b08821b, type: 2}
+  itemsToAdd: []
 --- !u!4 &758521423
 Transform:
   m_ObjectHideFlags: 0
@@ -620,6 +617,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &758521424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758521421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb45ba0d495ac0344b1efe35e10df16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  containers:
+  - {fileID: 1271241438}
+  - {fileID: 1460175609}
+  - {fileID: 264327395}
+  - {fileID: 1195810885}
+  - {fileID: 1671147217}
+  itemsToAdd:
+  - {fileID: 11400000, guid: 9231e0cad1fa4f64e80c4105c1107118, type: 2}
+  - {fileID: 11400000, guid: 3c8ce483d6885214985fbeca30261dfc, type: 2}
+  - {fileID: 11400000, guid: dcc4e7645f8b0014097c62cd9b08821b, type: 2}
+  containerEnd: {fileID: 1181846880}
 --- !u!1 &874849012
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,7 +987,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a167348d6ce284eb3e25e09af42d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsToAdd: []
 --- !u!65 &1195810887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1146,8 +1165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a167348d6ce284eb3e25e09af42d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsToAdd:
-  - {fileID: 11400000, guid: 3c8ce483d6885214985fbeca30261dfc, type: 2}
 --- !u!1001 &1382785969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1411,8 +1428,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a167348d6ce284eb3e25e09af42d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsToAdd:
-  - {fileID: 11400000, guid: dcc4e7645f8b0014097c62cd9b08821b, type: 2}
 --- !u!65 &1460175611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1624,7 +1639,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a167348d6ce284eb3e25e09af42d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsToAdd: []
 --- !u!65 &1671147219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1832,7 +1846,7 @@ GameObject:
   - component: {fileID: 1937574405}
   - component: {fileID: 1937574404}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Bench
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

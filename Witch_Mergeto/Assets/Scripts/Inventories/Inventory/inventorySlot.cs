@@ -13,8 +13,6 @@ public class inventorySlot : MonoBehaviour, IPointerDownHandler
     private container attachedContainer;
     private inventoryManager inventoryManager;
 
-   
-
     public void setSlot(inventory attachedInventory, int SlotID, container attachedContainer)
     {
         this.SlotID = SlotID;

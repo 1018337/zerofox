@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\buttonCheck.cs" />
+    <Compile Include="Assets\Scripts\clearAndReset.cs" />
     <Compile Include="Assets\Scripts\Inventories\Container\container.cs" />
     <Compile Include="Assets\Scripts\Inventories\Container\containerChest.cs" />
     <Compile Include="Assets\Scripts\Inventories\Container\containerChestInventory.cs" />

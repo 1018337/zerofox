@@ -100,14 +100,14 @@ public class itemStack
     //moves the item to new slot
     public itemStack copy()
     {
-        Debug.Log("Copied" + this.slotID + this.item + this.count);
+        //Debug.Log("Copied" + this.slotID + this.item + this.count);
         return new itemStack(this.item, this.count, this.slotID);
     }
 
     //checks if items can stack or not
     public bool isItemEqual(itemStack stackIn)
     {
-        Debug.Log("Stacking");
+        //Debug.Log("Stacking");
         return !stackIn.isEmpty() && this.item == stackIn.getItem();
     }
 

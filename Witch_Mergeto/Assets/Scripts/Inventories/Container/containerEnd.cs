@@ -9,17 +9,11 @@ public class containerEnd : MonoBehaviour
     private player player;
     private inventoryManager inventoryManager;
     public inventory inventory = new inventory(3);
-    bool isOpen;
     public item[] itemsToAdd;
     void Start()
     {
-        foreach (item item in itemsToAdd)
-        {
-            inventory.addItem(new itemStack(item, 1));
-        }
         player = FindObjectOfType<player>();
         inventoryManager = inventoryManager.INSTANCE;
-
     }
     private void OnMouseOver()
     {        
@@ -32,7 +26,9 @@ public class containerEnd : MonoBehaviour
     public string Check()
     {
         string checker = "";
-        List<itemStack> items =  inventory.getInventoryStacks();
+        List<itemStack> items = new List<itemStack>();
+        items = inventory.getInventoryStacks();
+        //Debug.Log(items.Count);
         foreach (itemStack item in items)
         {
             if (item.item != null)
@@ -42,5 +38,19 @@ public class containerEnd : MonoBehaviour
         }
         return checker;
         //Debug.Log(checker + " result");
+    }
+
+    public void resetContainer()
+    {
+        List<itemStack> items = inventory.getInventoryStacks();
+        foreach (itemStack item in items)
+        {
+            if (item.item != null)
+            {
+                inventory.remAll();
+            }
+        }
+        items = new List<itemStack>();
+        inventory = new inventory(3);
     }
 }

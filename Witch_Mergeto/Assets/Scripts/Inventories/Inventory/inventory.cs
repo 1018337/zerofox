@@ -43,6 +43,16 @@ public class inventory
         }
         return false;
     }
+    public void remAll()
+    {
+        foreach (itemStack stack in inventoryContents)
+        {
+            if (!stack.isEmpty())
+            {
+                stack.decreaseAmount(1);
+            }
+        }
+    }
     public itemStack getStackInSlot(int index)
     {
         return inventoryContents[index];

@@ -59,10 +59,13 @@ public class container
     public void closeContainer()
     {
         // blow up the container with nukes and stuff
-        if (spawnedContainerPrefab.name != "Player Inventory(Clone)")
+        if (spawnedContainerPrefab != null)
         {
-            Debug.Log(spawnedContainerPrefab.name);
-            Object.Destroy(spawnedContainerPrefab);
+            if (spawnedContainerPrefab.name != "Player Inventory(Clone)")
+            {
+                //Debug.Log(spawnedContainerPrefab.name);
+                Object.Destroy(spawnedContainerPrefab);
+            }
         }
     }
     // needs to be overridden can not be left blank or null

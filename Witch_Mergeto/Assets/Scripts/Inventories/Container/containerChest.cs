@@ -10,17 +10,20 @@ public class containerChest : MonoBehaviour
     private inventoryManager inventoryManager;
     public inventory inventory = new inventory(3);
     bool isOpen;
-    public item[] itemsToAdd;
+    private item[] itemsToAdd;
+
     void Start()
     {
-        foreach (item item in itemsToAdd)
-        {
-            inventory.addItem(new itemStack(item, 1));
-        }
         player = FindObjectOfType<player>();
         inventoryManager = inventoryManager.INSTANCE;
-
     }
+
+    public void addItems(item items)
+    {
+        //Debug.Log(items);
+        inventory.addItem(new itemStack(items, 1));
+    }
+
     private void OnMouseOver()
     {        
         if(Input.GetMouseButtonDown(1))//right click

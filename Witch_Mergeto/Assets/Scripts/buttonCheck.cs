@@ -5,36 +5,48 @@ using UnityEngine;
 public class buttonCheck : MonoBehaviour
 {
     public containerEnd containerEnd;
-    private List<string> alpha = new List<string> { "A", "B", "C"};
+    private clearAndReset clearAndReset;
+    private inventoryManager inventoryManager;
+    private List<string> containers = new List<string> { "A", "B", "C"};
     string checker;
     void Start()
     {
-        for (int i = 0; i < alpha.Count; i++)
-        {
-            string temp = alpha[i];
-            int randomIndex = Random.Range(i, alpha.Count);
-            alpha[i] = alpha[randomIndex];
-            alpha[randomIndex] = temp;
-        }
-        foreach (string alpha in alpha)
-        {
-            checker += alpha;
-        }
+        resetPotions();
     }
 
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(1))//right click
         {
-            Debug.Log(checker);
-            string result = containerEnd.Check();
+            string result = "";
+            result = containerEnd.Check();
             Debug.Log(result);
+            Debug.Log(checker);
             if (result == checker)
             {
                 Debug.Log("congrats");
+                resetPotions();
             }
             else
                 Debug.Log("nope");
         }
+    }
+
+    private void resetPotions()
+    {
+        checker = "";
+        for (int i = 0; i < containers.Count; i++)
+        {
+            string temp = containers[i];
+            int randomIndex = Random.Range(i, containers.Count);
+            containers[i] = containers[randomIndex];
+            containers[randomIndex] = temp;
+        }
+        foreach (string containers in containers)
+        {
+            checker += containers;
+        }
+        inventoryManager.INSTANCE.closeContainer();
+        clearAndReset.INSTANCE.jumbleContainers();
     }
 }
