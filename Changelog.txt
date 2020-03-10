@@ -10,6 +10,9 @@ Witch 0.4
 - Added sprites
 - Changed final box to be different
 - Tried fixing inventories to work better but haven't done so yet
-Witch 0.5 - soon
+Witch 0.5
+- potions show under button
+- no more need for console to do the game
+Witch 0.6 - soon
 - Fix all inventories to allow difference between them
 - Add names to all inventory areas for easier control
