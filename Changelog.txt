@@ -1,0 +1,15 @@
+Witch 0.2
+- Added inventory system
+Witch 0.3
+- Added multiple inventories
+- Added final chest
+- Added potion mix randomizer
+- Added chest randomizer
+- Added button for checking potion mix and finishing area
+Witch 0.4
+- Added sprites
+- Changed final box to be different
+- Tried fixing inventories to work better but haven't done so yet
+Witch 0.5 - soon
+- Fix all inventories to allow difference between them
+- Add names to all inventory areas for easier control
